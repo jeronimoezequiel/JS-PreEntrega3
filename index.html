@@ -4,53 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.19/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>A U R A | Chatbot</title>
+    <script src="./js/app.js" defer></script>
+    <title>A U R A | Bienvenido</title>
 </head>
-<body>    
+<body>
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="" class="sign-in-form">
-                    <!-- <h1>A U R A </h1> -->
-                    <h2>Sign In</h2>
-                    <div class="input-field">
-                        <i class='bx bxs-user'></i>
-                        <input type="text" name="text" id="text" placeholder="Username">
-                    </div>
-                    <div class="input-field">
-                        <i class='bx bxs-lock-alt'></i>
-                        <input type="password" name="password" id="password" placeholder="password">
-                    </div>
-                    <input type="submit" value="login" class="btn">
-                    <p class="social-text">Or sign in with social platform</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class='bx bxl-linkedin-square' ></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class='bx bxl-github' ></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class='bx bxl-google' ></i>
-                        </a>
-                    </div>
-                </form>
-                <form action="" class="sign-up-form">
+                <!-- Iniciar Sesion -->
+                    <form action="" method="POST" class="sign-in-form">
+                        <h1>A U R A </h1>
+                        <h2>Sign In</h2>
+                        <div class="input-field">
+                            <i class='bx bxs-user'></i>
+                            <input type="text" id="usuarioPrincipal" placeholder="Nombre de usuario" autocomplete="off">
+                        </div>
+                        <div class="input-field">
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="text" id="passPrincipal" placeholder="Contraseña">
+                        </div>
+                            <button type="button" onclick="entrar()" class="btn">Sign In</button>
+
+                            <!-- Iniciar sesion con aplicaciones -->
+                            <p class="social-text">Or sign in with social platform</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class='bx bxl-linkedin-square' ></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class='bx bxl-github' ></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class='bx bxl-google' ></i>
+                            </a>
+                        </div>
+                    </form>
+
+                <!-- Registrar Nuevo Usuario -->
+                <form action="" class="sign-up-form" id="form">
                     <h2>Sign Up</h2>
                     <div class="input-field">
                         <i class='bx bxs-user'></i>
-                        <input type="text" name="text" id="text" placeholder="Username">
+                        <input type="text" name="" id="usuario" required placeholder="Nombre de Usuario">
                     </div>
                     <div class="input-field">
                         <i class='bx bxs-envelope' ></i>
-                        <input type="text" name="text" id="text" placeholder="Email">
+                        <input type="email" name="" id="email" required placeholder="Email">
                     </div>
                     <div class="input-field">
                         <i class='bx bxs-lock-alt'></i>
-                        <input type="password" name="password" id="password" placeholder="password">
+                        <input type="password" name="" id="contraseña" placeholder="Contraseña">
                     </div>
-                    <input type="submit" value="Sign up" class="btn">
+                    <input  type="button" value="Sign up" class="btn">
+
+                    <!-- Registrarse completado con Redes Sociales -->
                     <p class="social-text">Or sign up with social platform</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -66,6 +75,7 @@
                 </form>
             </div>
         </div>
+
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
@@ -85,7 +95,5 @@
             </div>
         </div>
     </div>
-
-    <script src="./js/app.js"></script>
 </body>
 </html>
