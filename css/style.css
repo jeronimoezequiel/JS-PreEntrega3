@@ -430,6 +430,11 @@ a{
     padding: 20px 22px 30px;
 }
 
+.list{
+    position: fixed;
+    top: -54px;
+}
+
 .navigation.active{
     width: 300px;
 }
@@ -479,7 +484,7 @@ a{
 
 .navigation ul li a .title{
     font-family: 'Roboto';
-    font-size: 1.2em;
+    font-size: 1em;
     color: #fff;
     position: relative;
     display: block;
