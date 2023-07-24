@@ -394,3 +394,133 @@ form.sign-up-form{
 };
 
 /*----------------- iNICIO -----------------*/
+
+:root{
+    --clr-main: #001236;
+    --clr-white: #fff;
+    --clr-grey: #e2e2e2e2;
+    --clr-black: #000;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navigation{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: 70px;
+    border-radius: 10px;
+    box-sizing: initial;
+    border-left: 5px solid  #001236;
+    background-color:  #001236;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    padding: 20px 22px 30px;
+}
+
+.navigation.active{
+    width: 300px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 100px;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li.active{
+    background-color: #fff;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: #fff;
+}
+
+.navigation ul li.active a,
+.navigation ul li.active a .title{
+    color: #333;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.navigation ul li a .title{
+    font-family: 'Roboto';
+    font-size: 1.2em;
+    color: #fff;
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 60px;
+    white-space: normal;
+}
+.toggle{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #001236;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle.active{
+    background-color: #042c7c;
+}
+
+.ion-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+}
+
+.ion-icon.open, 
+.toggle.active .ion-icon.close{
+    display: block;
+}
+
+.ion-icon.close,
+.toggle.active .ion-icon.open{
+    display: none;
+}
+
+
