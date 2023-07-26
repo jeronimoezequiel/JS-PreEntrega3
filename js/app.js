@@ -32,6 +32,8 @@ function obetnerListaUsuarios() {
             ['4', 'Victoria', 'Lupetti', '37151847', '37151847',  '1'],
             ['5', 'Barbara',  'Lupetti', '38866179', '38866179',  '1'],
             ['6', 'Franco',   'Galatti', '38691753', '38691753',  '1'],
+            ['7', 'Joaquin',  'Nuñez',   '42605282', '42605282',  '1'],
+            ['8', 'Flavia',   'Lujan',   '25308982', '25308982',  '1'],
         ];
     };
 return listaUsuarios;
