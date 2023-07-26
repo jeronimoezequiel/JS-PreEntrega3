@@ -1,5 +1,5 @@
 // swal.fire({
-//     title: "Bienvenidos!",
+//     title: "Hola, mi nombre es AURA!",
 //     confirmButtonText: "Ingresar",
 // });
 
@@ -50,4 +50,8 @@ function validarCredenciales(pUsuario, pContrasenna) {
     };
 return bAcceso;
 };
+
+
+
+
 

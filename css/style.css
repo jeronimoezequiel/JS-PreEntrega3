@@ -410,12 +410,16 @@ a{
     text-decoration: none;
 }
 
-.navigation{
+body{
+    background-color: #e9e9e9;
+}
+
+.navigation {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    width: 70px;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    width: 74px;
     border-radius: 10px;
     box-sizing: initial;
     border-left: 5px solid  #001236;
@@ -425,9 +429,24 @@ a{
 }
 
 .logo{
-    font-size: 2rem;
+    font-size: 2.55rem;
+    letter-spacing: .3rem;
     color: #fff;
     padding: 20px 22px 30px;
+    position: fixed;
+    top: -13px;
+    left: 8px;
+}
+
+.logo-b{
+    font-size: 2.55rem;
+    letter-spacing: .3rem;
+    color: #fffffff8;
+    padding: 20px 22px 30px;
+    position: fixed;
+    top: -13px;
+    left: 69px;
+
 }
 
 .list{
@@ -436,12 +455,12 @@ a{
 }
 
 .navigation.active{
-    width: 300px;
+    width: 251px;
 }
 
 .navigation ul{
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     padding-left: 5px;
@@ -484,7 +503,8 @@ a{
 
 .navigation ul li a .title{
     font-family: 'Roboto';
-    font-size: 1em;
+    font-weight: 500;
+    font-size: 1.1em;
     color: #fff;
     position: relative;
     display: block;
@@ -493,22 +513,27 @@ a{
     line-height: 60px;
     white-space: normal;
 }
+
 .toggle{
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #001236;
+    top: 54px;
+    left: 27px;
+    width: 35px;
+    height: 35px;
+    background-color: #001236 transparent;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .3s ease-in-out;
 }
 
 .toggle.active{
-    background-color: #042c7c;
+    background-color:  #001236;
+    left: 216px;
+    transition: .4s ease-in-out;
+    border: 1.5px solid #fff;
 }
 
 .ion-icon{
@@ -528,4 +553,662 @@ a{
     display: none;
 }
 
+/*==== Perfil ====*/
+.perfil ul li a .icon-perfil{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.3em;
+    color: #fff;
+}
 
+.perfil ul li a .title-perfil{
+    font-family: 'Roboto';
+    font-size: 1.1em;
+    color: #fff;
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 60px;
+    white-space: normal;
+}
+
+/*----------------- main -----------------*/
+main{
+    /* background: #fdfdfde1; */
+    /* height: 98vh; */
+    margin: .4rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem;
+    overflow-x: hidden;
+} 
+
+main .search-bar{
+    position: fixed;
+    width: 25%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border: 3px solid #fff;
+    padding: 8px 15px;
+    border-radius: 30px;
+    margin-left: 64%;
+    top: 3.2rem;
+}
+
+main .search-bar input{
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 400;
+    width: 90%;
+    padding: 3px 15px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+main .search-bar .bi{
+    font-size: 14px;
+}
+
+main .search-bar-perfil{
+    width: 36%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    padding: 8px 15px;
+    border-radius: 30px;
+    margin-left: 29%;
+}
+
+main .search-bar-perfil input{
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 400;
+    width: 90%;
+    padding: 3px 15px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+main .search-bar-perfil .bi{
+    font-size: 14px;
+}
+
+.feeds-content{
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr)
+    49rem 40rem minmax(5rem, 1fr);
+    /* border-top: 0.1rem solid #eee; */
+    padding-top: 2rem; 
+}
+
+.feeds-header{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #fff;
+    margin-top: .1rem;
+}
+
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid #eee;
+}
+
+.header-top h4{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.45rem;
+    padding: .4rem 1rem;
+    color: #1f515e;
+}
+
+.header-top i{
+    font-size: 1.35rem;
+    color: #27abcc;
+    padding: .4rem 1rem;
+}
+
+.header-post{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-img-wrapper{    
+    width: 3.7rem;
+    height: 3.7rem;
+    margin-right: 1.5rem;
+}
+
+.header-img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.header-post input{
+    width: 40rem;
+    height: 3rem;
+    border: 0.1rem solid #496066;
+    border-radius: 3rem;
+    background-color: #f7f7f7;
+    padding: 0.4rem 1rem;
+}
+
+.header-post i{
+    margin: .4rem;
+}
+
+.image-color{
+    font-size: 1.4rem;
+    color: #1aa1f5;
+}
+
+.camera-color:hover, .image-color:hover, .event-color:hover{
+    color: #011f5a;
+}
+
+.camera-color{
+    font-size: 1.4rem;
+    color: #14db50;
+}
+
+.event-color{
+    font-size: 1.4rem;
+    color: #dba614;
+}
+
+.posts{
+    grid-column: 2/3;
+    grid-row: 2/-1;
+    background-color: #fff;
+}
+
+.post{
+    display: flex;
+    padding: 1.7rem;
+    border-bottom: 0.1rem solid #eee;
+}
+
+.user-avatar{
+    width: 3.7rem;
+    height: 3.7rem;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+    margin-left: -.5rem;
+}
+
+.user-avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post-user-info{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.post-user-info h4{
+    font-family: 'Roboto';
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+}
+
+.post-user-info span, .post-text{
+    font-family: 'Roboto';
+    font-size: 1rem;
+    margin-left: 0rem;
+}
+
+.post-text{
+    margin-right: 8rem;
+    margin-left: 1rem;
+}
+
+.post-icons{
+    margin-left: 12rem;
+    margin-top: -2rem;
+}
+
+.post-icons i:hover{
+    color: #001236;
+    border-radius: .5rem;
+}
+
+.post-icons i{
+    font-size: 1.6rem;
+    color: #868383;
+    margin-right: 6rem;
+}
+
+.post-image{
+    width: 45rem;
+    margin-left: 5rem;
+    /* height: 30rem; */
+}
+
+.post-image img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    border-radius: 3rem;
+    margin: 0rem 0rem 1rem -6.4rem;
+    padding: 2rem;
+}
+
+.follow{
+    position: fixed;
+    top: 5.7rem;
+    left: 65.5%;
+    background-color: #f5f5f5;
+    width: 24rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.follow-heading{
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    padding: .6rem;
+    border-bottom: 0.1rem solid #ffffff;
+}
+
+.follow-user{
+    display: flex;
+    align-items: center;
+    padding: .85rem;
+}
+
+.follow-user:hover{
+    background-color: #b1b1b1;
+}
+
+.follow-user-img{
+    width: 3.7rem;
+    height: 3.7rem;
+    margin-right: 2rem;
+}
+
+.follow-user-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.follow-user-info h4{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+} 
+
+.follow-user-info p{
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: #9e9e9e;
+}
+
+.follow-btn{
+    margin-left: auto;
+    width: 9rem;
+    background-color: #fff;
+    color: #1aa1f5;
+    padding: 0.4rem 0.3rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.follow-link{
+    font-family: 'Roboto';
+    margin: .2rem .5rem;
+    padding: .7rem;
+    
+}
+.follow-link a{
+    color: #1aa1f5;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.follow-link a:hover{
+    font-family: 'Roboto';
+    color: #224faa;
+    font-weight: 600;
+}
+
+.follow-footer{
+    background-color: #f0f0f0;
+    border-top: 0.1rem solid #ffffff;
+    border-radius: 1rem;
+}
+
+.follow-footer ul{
+    font-family: 'Roboto';
+    display: flex;
+    padding: 2.5rem 0;
+}
+
+.follow-footer a{
+    font-size: .8rem;
+    color: #868683;
+    margin: .68rem;
+}
+
+/*================*/
+
+.follow-trends{
+    position: fixed;
+    top: 7rem;
+    left: 65.5%;
+    background-color: #f5f5f5;
+    width: 24rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.follow-heading-trends{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: .6rem;
+    border-bottom: 0.1rem solid #ffffff;
+}
+
+.follow-user-trends{
+    display: flex;
+    align-items: center;
+    padding: .85rem;
+}
+
+.follow-user-info-trends{
+
+}
+
+.follow-user-info-trends h4{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+} 
+
+.follow-user-info-trends p{
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: #9e9e9e;
+}
+
+.follow-btn{
+    margin-left: auto;
+    width: 9rem;
+    background-color: #fff;
+    color: #1aa1f5;
+    padding: 0.4rem 0.3rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.main-h2{
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin-left: 23.5%;
+    width: 100%;
+    height: 200vh;
+    margin-top: 1rem;
+}
+
+.main-parrafo{
+    font-family: 'Roboto';
+    font-size: 1.3rem;
+    color: #868383;
+    position: absolute;
+    top: 58%;
+    left: 21.5%;
+}
+
+.main-button{
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: white;
+    background-color: #27abcc;
+    border: none;
+    border-radius: 3rem;
+    padding: .7rem 2.5rem;
+    position: absolute;
+    left: 25%;
+    margin-top: 1.2rem;
+
+}
+
+.feeds-content-section{
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr)
+    49rem 40rem minmax(5rem, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    padding-top: 2rem;
+}
+
+.feeds-header-section{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #fff;
+}
+
+.follow-user-info-trends .trends-p{
+    font-size: .9rem;
+    color: #8d8c8c;
+}
+
+.follow-user-info-trends .trends-h4{
+    font-size: 1.4rem;
+}
+
+/*------------ CHATBOT --------------*/
+.chatbot-toggler{
+    position: fixed;
+    left: 103px;
+    bottom: 8px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #023981;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+.show-chatbot .chatbot-toggler{
+    transform: rotate(90deg);
+}
+.chatbot-toggler span{
+    position: absolute;
+}
+.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child {
+    opacity: 0;
+}
+.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+}
+
+.chatbot{
+    position: fixed;
+    left: 151px;
+    top: 95px;
+    width: 33%;
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+    background: #fff;
+    border-radius: 15px;
+    transform-origin: bottom left;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease;
+}
+.show-chatbot .chatbot {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.chatbot header{
+    background: #023981;
+    padding: 10px 0;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+}
+
+.chatbot header h2{
+    font-family: 'NUSAR';
+    color: #fff;
+    font-size: 2.2rem;
+}
+.chatbot header span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    transform: translateY(-50%);
+}
+
+.chatbot .chatbox {
+    font-family: 'Roboto';
+    height: 415px;
+    overflow-y: auto;
+    padding: 30px 20px 100px;
+}
+
+.chatbox .chat{
+    display: flex;
+}
+.chatbox .incoming span {
+    font-family: 'Roboto';
+    height: 32px;
+    width: 32px;
+    color: #fff;
+    align-self: flex-end;
+    background-color:  #023981;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 4px;
+    margin: 0 10px 7px 0;
+}
+.chatbox .outgoing{
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.chatbox .chat p.error{
+    color: #721c24;
+    background: #f8d7da;
+}
+
+.chatbox .chat p{
+    color: #fff;
+    max-width: 75%;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    background-color:  #023981;
+}
+
+.chatbox .incoming p{
+    font-family: 'Roboto';
+    color: #000;
+    background-color: #f2f2f2;
+    border-radius: 10px 10px 10px 0;
+}
+
+.chatbot .chat-input {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    background: #fff;
+    padding: 5px 20px;
+}
+
+.chat-input textarea {
+    font-family: 'Roboto';
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    max-height: 180px;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 16px 15px 16px 0;
+}
+
+.chat-input span {
+    align-self: flex-end;
+    height: 55px;
+    line-height: 55px;
+    color:  #023981;
+    font-size: 1.35rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.chat-input textarea:valid ~ span {
+    visibility: visible;
+}
+
+@media(max-width: 490px) {
+    .chatbot {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .chatbot .chatbox {
+        height: 90%;
+    }
+    .chatbot header span{
+        display: block;
+    }
+}

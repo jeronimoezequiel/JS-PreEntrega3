@@ -13,6 +13,12 @@ function iniciarSesion(){
 
     if(bAcceso == true) {
         ingresar();
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Datos incorrectos',
+        });
     };
 }; 
 
@@ -33,8 +39,11 @@ function ingresar() {
                 }
             ); 
         break;
-        case '2':
-            
+        case '2': 
+            ;
+        break;        
+        default:
+            window.location.href = 'index.html';
         break;
     }
 };
